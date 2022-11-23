@@ -1,0 +1,26 @@
+.quantity{
+  display: flex;
+  gap: 2rem;
+  margin-top: .625rem ;
+  align-items: center;
+}
+.quantity-desc{
+  border: .0625rem solid gray;
+padding: .375rem;
+}
+.quantity-desc span{
+  font-size: 1rem;
+  padding: .375rem .75rem;
+  cursor: pointer;
+}
+.quantity-desc .minus{
+  border-right: .0625rem solid gray;
+  color: #09334F;
+}
+.quantity-desc .num{
+  border-right: .0625rem solid gray;
+  font-size: 1.25rem;
+}
+.quantity-desc .plus{
+  color: rgb(49, 168, 49);
+}

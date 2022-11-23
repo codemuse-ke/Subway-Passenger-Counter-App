@@ -1,7 +1,7 @@
 //Class based components - useState
 import React, { Component } from "react";
 
-class CounterApp extends Component {
+class ClassCounter extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -35,4 +35,4 @@ class CounterApp extends Component {
   }
 }
 
-export default CounterApp;
+export default ClassCounter;

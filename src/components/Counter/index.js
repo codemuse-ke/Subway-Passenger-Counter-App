@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
-import "./Counter.css";
+import "./index.css";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
