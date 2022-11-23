@@ -18,7 +18,7 @@ const Counter = () => {
   }, []);
   return (
     <div className="quantity">
-      <h3>Counter App:</h3>
+      <h3>Passanger Counter</h3>
       <p className="quantity-desc">
         <span className="minus" onClick={handleAddCount}>
           <AiOutlineMinus />

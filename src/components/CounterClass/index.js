@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import "./index.css";
 
-class CounterClass extends Component {
+export default class CounterClass extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,11 +11,11 @@ class CounterClass extends Component {
   }
 
   handleAddCount = () => {
-    this.setState((prevCount) => this.prevCount - 1);
+    this.setState((prevState) => ({ count: prevState.count + 1 }));
   };
 
   handleMinusCount = () => {
-    this.setState((prevCount) => this.prevCount + 1);
+    this.setState((prevState) => ({ count: prevState.count - 1 }));
   };
 
   render() {
@@ -23,11 +23,11 @@ class CounterClass extends Component {
       <div className="quantity">
         <h3>Counter App:</h3>
         <p className="quantity-desc">
-          <span className="minus" onClick={this.handleAddCount}>
+          <span className="minus" onClick={this.handleMinusCount}>
             <AiOutlineMinus />
           </span>
           <span className="num">{this.state.count}</span>
-          <span className="plus" onClick={this.handleMinusCount}>
+          <span className="plus" onClick={this.handleAddCount}>
             <AiOutlinePlus />
           </span>
         </p>
@@ -35,5 +35,3 @@ class CounterClass extends Component {
     );
   }
 }
-
-export default CounterClass;
