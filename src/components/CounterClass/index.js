@@ -8,14 +8,26 @@ export default class CounterClass extends Component {
     this.state = {
       count: 0,
     };
+
+
+    //How to bind eventHandlers(// This binding is necessary to make `this` work in the callback)
+    this.handleAddCount = this.handleAddCount.bind(this)
+    // this.handleMinusCount = this.handleMinusCount.bind(this)
   }
 
-  handleAddCount = () => {
-    this.setState((prevState) => ({ count: prevState.count + 1 }));
-  };
+  //This syntax requires a binding method, prefarably in the constructor as per the REACT documentation.
+  handleAddCount(){
+    this.setState((prevState) => ({
+      count: prevState.count -1
+    }))
+    console.log(this);
 
+  }
+
+  //Using an arrow function is also a binding method!! No need to bind it inside the constructor
   handleMinusCount = () => {
     this.setState((prevState) => ({ count: prevState.count - 1 }));
+
   };
 
   render() {
